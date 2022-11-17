@@ -1,0 +1,142 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+   
+    
+  }
+  
+  .wrapper {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btn {
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    margin: 0 12px;
+    padding: 16px 32px;
+    outline: none;
+    border: none;
+    border-radius: 24px;  
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    box-shadow: 0 2px 8px -1px rgba(21, 25, 36, 0.32);
+  }
+  
+  .btn::after {
+    content: "";
+    border-radius: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 250ms ease;
+  }
+  
+  .btn:hover::after {
+    opacity: 1;
+  }
+  
+  .btn--accept {
+    background-color:rgb(86, 86, 203);
+  }
+  .btn--accept::after {
+    background-color: rgb(86, 86, 203);
+  }
+  
+  .btn--cancel {
+    background-color:rgb(235, 7, 163);
+  }
+  .btn--cancel::after {
+    background-color: rgb(235, 7, 163);
+  }
+  
+  .dialog {
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    justify-content: space-between;
+    padding: 6px 0px 6px 16px;
+    border-bottom: 1px solid #EEEEEE;
+    border-radius: 5px;
+    position: absolute;
+    right: 20px;
+    width: 245px;
+    background: #FAFAFA;
+    box-shadow: 0 2px 8px -1px rgba(21, 25, 36, 0.32);
+  }
+  
+  .dialog--accept {
+    top: 30px;
+  }
+  
+  .dialog--cancel {
+    bottom: 30px;
+  }
+  
+  .dialog__title {
+    color: #616161;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .dialog--show {
+    animation: bounce-in-right 0.7s ease;
+    animation-fill-mode: forwards;
+  }
+  
+  .dialog--hide {
+    animation: fade-out-down 1s ease;
+  }
+  
+  @keyframes bounce-in-right {
+    0% {
+      opacity: 0;
+      transform: translateX(500px);
+    }
+    60% {
+      opacity: 1;
+      transform: translateX(-30px);
+    }
+    80% { 
+      transform: translateX(5px); 
+    }
+    100% { 
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0); 
+    }
+  }
+  
+  @keyframes fade-out-down {
+    0% {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px);
+    }
+  }
+  .women{
+        size: 20ch;  
+
+  }
+  
+  
+  
